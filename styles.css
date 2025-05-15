@@ -316,3 +316,31 @@ footer {
     display: block;
     margin-bottom: 0.3rem;
 }
+
+/* Deux colonnes pour les stages et l'éducation sur écran large */
+@media (min-width: 900px) {
+    .internships,
+    .education {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+    .internship,
+    .education-item {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Pour garder l'alignement vertical sur mobile */
+@media (max-width: 899px) {
+    .internships,
+    .education {
+        display: block;
+    }
+}
+
+/* Pour éviter le débordement des listes dans les colonnes */
+.internship,
+.education-item {
+    break-inside: avoid;
+}
