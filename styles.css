@@ -137,20 +137,27 @@ footer {
 /* Fond spécifique pour la section Research */
 .research-bg {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url('https://cdn.esawebb.org/archives/images/screen/heic2208a.jpg') no-repeat center center/cover;
+        url('https://cdn.esawebb.org/archives/images/screen/weic2407a.jpg') no-repeat center center/cover;
+}
+
+/* Fond spécifique pour la section News / Annoucements */
+.news-bg {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('https://cdn.esawebb.org/archives/images/screen/weic2425a.jpg') no-repeat center center/cover;
 }
 
 /* Fond spécifique pour la section Contact */
 .contact-bg {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url('https://cdn.esawebb.org/archives/images/screen/heic1509a.jpg') no-repeat center center/cover;
+        url('https://cdn.esawebb.org/archives/images/screen/weic2411a.jpg') no-repeat center center/cover;
 }
 
-/* Photo de profil ronde */
+/* Photo de profil ronde avec contrôle de la position */
 .profile-photo {
     width: 160px;
     height: 160px;
     object-fit: cover;
+    object-position: center;
     border-radius: 50%;
     border: 4px solid #fff;
     margin-bottom: 1rem;
@@ -242,7 +249,7 @@ footer {
     vertical-align: middle;
     margin-right: 12px;
     margin-bottom: 6px;
-    background: #fff;
+    background: none;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
@@ -262,19 +269,45 @@ footer {
 
 .education-item {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 1.5rem;
-    gap: 16px;
+    gap: 0;
+    text-align: center;
 }
 
-/* Logo des universités */
-.education-logo {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-    background: #fff;
+.education-item > div {
+    text-align: center;
+}
+
+/* Nouveau conteneur pour les logos d'université */
+.logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* La box s'adapte à la taille de l'image, mais ne dépasse pas la taille max */
+    max-width: 64px;
+    max-height: 64px;
+    min-width: 32px;
+    min-height: 32px;
+    width: auto;
+    height: auto;
+    background: none;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 0;
+    margin: 0;
+}
+
+/* Logo des universités, image responsive dans la box */
+.education-logo {
+    display: block;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
     flex-shrink: 0;
 }
 
@@ -282,12 +315,6 @@ footer {
 .education-period {
     color: #00aaff;
     font-size: 0.95em;
-}
-
-/* Fond spécifique pour la section News/Announcements */
-.news-bg {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url('https://cdn.esawebb.org/archives/images/screen/heic2302a.jpg') no-repeat center center/cover;
 }
 
 /* Liste des news/annonces */
