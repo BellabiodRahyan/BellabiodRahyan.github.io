@@ -1,3 +1,4 @@
+/* Style général du corps de la page */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -5,6 +6,7 @@ body {
     background-color: #000000;
 }
 
+/* En-tête avec image de fond (effet "hero") */
 .hero {
     height: 100vh;
     background: url('https://cdn.esawebb.org/archives/images/publicationjpg/carinanebula3.jpg') no-repeat center center/cover;
@@ -15,6 +17,7 @@ body {
     text-align: center;
 }
 
+/* Overlay sombre sur l'image de fond du hero */
 .hero .overlay {
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
@@ -28,21 +31,60 @@ body {
     align-items: center;
 }
 
+/* Titre principal dans le hero */
 .hero h1 {
     font-size: 3rem;
     margin: 0;
 }
 
+/* Sous-titre dans le hero */
 .hero p {
     font-size: 1.5rem;
 }
 
+/* Styles de la barre de navigation */
 nav {
     background: #333;
     padding: 0.5rem 0;
     text-align: center;
 }
 
+/* Navbar fixe en haut de la page */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+/* Liste horizontale dans la navbar */
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Styles supplémentaires pour la liste de navigation */
 nav ul {
     list-style: none;
     padding: 0;
@@ -62,15 +104,215 @@ nav ul li a:hover {
     color: #00aaff;
 }
 
+/* Style général des sections principales */
 main section {
     padding: 2rem;
     text-align: center;
 }
 
+/* Pied de page */
 footer {
     background: #111;
     padding: 1rem;
     text-align: center;
     font-size: 0.9rem;
     color: #aaa;
+}
+
+/* Fond et couleur pour chaque grande section avec effet spatial */
+.astro-section {
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Fond spécifique pour la section About */
+.about-bg {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('https://cdn.esawebb.org/archives/images/screen/weic2216a.jpg') no-repeat center center/cover;
+}
+
+/* Fond spécifique pour la section Research */
+.research-bg {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('https://cdn.esawebb.org/archives/images/screen/heic2208a.jpg') no-repeat center center/cover;
+}
+
+/* Fond spécifique pour la section Contact */
+.contact-bg {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('https://cdn.esawebb.org/archives/images/screen/heic1509a.jpg') no-repeat center center/cover;
+}
+
+/* Photo de profil ronde */
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+
+/* Bouton/lien pour télécharger le CV */
+.cv-link {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.5rem 1.2rem;
+    background: #00aaff;
+    color: #fff;
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.cv-link:hover {
+    background: #0077aa;
+}
+
+/* Lien vers Google Scholar */
+.scholar-link {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.4rem 1.1rem;
+    background: #4285f4;
+    color: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.scholar-link:hover {
+    background: #1967d2;
+}
+
+/* Bloc pour les publications futures */
+.future-publications {
+    margin-top: 2rem;
+    background: rgba(0,0,0,0.4);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.future-publications h3 {
+    color: #00aaff;
+    margin-top: 0;
+}
+
+.future-publications ul {
+    margin: 0.5rem 0 0 1.2rem;
+    padding: 0;
+    color: #fff;
+}
+
+/* Bloc des stages */
+.internships {
+    margin-top: 2rem;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(0,0,0,0.5);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.internship {
+    margin-bottom: 1.5rem;
+}
+
+.internship h4 {
+    margin-bottom: 0.3rem;
+    color: #00aaff;
+}
+
+/* Logo des établissements de stage */
+.internship-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 12px;
+    margin-bottom: 6px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Bloc du parcours universitaire */
+.education {
+    margin-top: 2rem;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(0,0,0,0.5);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 16px;
+}
+
+/* Logo des universités */
+.education-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+/* Couleur pour la période des études */
+.education-period {
+    color: #00aaff;
+    font-size: 0.95em;
+}
+
+/* Fond spécifique pour la section News/Announcements */
+.news-bg {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('https://cdn.esawebb.org/archives/images/screen/heic2302a.jpg') no-repeat center center/cover;
+}
+
+/* Liste des news/annonces */
+.news-list {
+    margin-top: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+/* Bloc individuel d'une news/annonce */
+.news-item {
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Date d'une news/annonce */
+.news-date {
+    color: #00aaff;
+    font-size: 0.95em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.3rem;
 }

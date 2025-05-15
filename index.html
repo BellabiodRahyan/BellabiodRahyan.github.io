@@ -2,39 +2,139 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Meta pour le responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bellabiod Rahyan - Astrochemistry & Astrophysics</title>
+    <!-- Lien vers le fichier CSS externe -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
+    <!-- Barre de navigation principale -->
+    <nav id="navbar" class="navbar">
         <ul>
             <li><a href="#about">About Me</a></li>
             <li><a href="#research">Research/Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+    <!-- Script pour cacher/afficher la navbar lors du scroll -->
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Si on descend, cacher la navbar
+                navbar.style.top = '-60px'; // Ajuste selon la hauteur de ta navbar
+            } else {
+                // Si on remonte, afficher la navbar
+                navbar.style.top = '0';
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Pour mobile ou scroll négatif
+        });
+    </script>
+    <!-- En-tête avec image de fond et titre -->
     <header class="hero">
         <div class="overlay">
             <h1>Bellabiod Rahyan</h1>
-            <p>Student of Astrochemistry & Astrophysics</p>
+            <p>Student in Astrochemistry & Astrophysics</p>
         </div>
     </header>
     <main>
-        <section id="about">
+        <!-- Section À propos -->
+        <section id="about" class="astro-section about-bg">
             <h2>About Me</h2>
+            <!-- Photo de profil -->
+            <img src="profile.jpg" alt="Bellabiod Rahyan" class="profile-photo">
             <p>Welcome to my personal profile! I am a student of astrochemistry and astrophysics, passionate about exploring the mysteries of the universe.</p>
-            
+            <!-- Lien pour télécharger le CV -->
+            <p>
+                <a href="cv_bellabiod_rahyan.pdf" target="_blank" class="cv-link">Download my CV (PDF)</a>
+            </p>
+            <!-- Liste des stages -->
+            <div class="internships">
+                <h3>Internships</h3>
+                <div class="internship">
+                    <!-- Logo de l'établissement du stage -->
+                    <img src="logo_etablissement1.png" alt="Logo établissement 1" class="internship-logo">
+                    <h4>Stage 1: [Titre du stage]</h4>
+                    <p><strong>Lieu :</strong> [Nom de l'établissement ou entreprise]</p>
+                    <p><strong>Période :</strong> [Dates]</p>
+                    <p><strong>Résumé :</strong> [Décris brièvement le contenu, les missions, les compétences acquises, etc.]</p>
+                </div>
+                <div class="internship">
+                    <img src="logo_etablissement2.png" alt="Logo établissement 2" class="internship-logo">
+                    <h4>Stage 2: [Titre du stage]</h4>
+                    <p><strong>Lieu :</strong> [Nom de l'établissement ou entreprise]</p>
+                    <p><strong>Période :</strong> [Dates]</p>
+                    <p><strong>Résumé :</strong> [Décris brièvement le contenu, les missions, les compétences acquises, etc.]</p>
+                </div>
+                <!-- Ajoute d'autres stages si besoin -->
+            </div>
+            <!-- Parcours universitaire -->
+            <div class="education">
+                <h3>Education</h3>
+                <div class="education-item">
+                    <!-- Logo de l'université -->
+                    <img src="logo_universite1.png" alt="Logo université 1" class="education-logo">
+                    <div>
+                        <strong>[Nom du diplôme]</strong> – [Université 1]<br>
+                        <span class="education-period">[Années]</span>
+                        <p>[Description, spécialité, distinctions, etc.]</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <img src="logo_universite2.png" alt="Logo université 2" class="education-logo">
+                    <div>
+                        <strong>[Nom du diplôme]</strong> – [Université 2]<br>
+                        <span class="education-period">[Années]</span>
+                        <p>[Description, spécialité, distinctions, etc.]</p>
+                    </div>
+                </div>
+                <!-- Ajoute d'autres diplômes si besoin -->
+            </div>
         </section>
-        <section id="research">
+        <!-- Section Recherche et Projets -->
+        <section id="research" class="astro-section research-bg">
             <h2>Research/Projects</h2>
             <p>Here, I will showcase my research in astrochemistry and astrophysics, along with any projects or collaborations.</p>
+            <!-- Lien vers Google Scholar -->
+            <p>
+                <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" class="scholar-link">
+                    View my Google Scholar profile
+                </a>
+            </p>
+            <!-- Publications futures -->
+            <div class="future-publications">
+                <h3>Future Publications</h3>
+                <ul>
+                    <li>No publications yet. Stay tuned for upcoming research!</li>
+                    <!-- Ajoute ici tes futures publications quand elles seront disponibles -->
+                </ul>
+            </div>
         </section>
-        <section id="contact">
+        <!-- Section Annonces/Nouvelles (blog) -->
+        <section id="news" class="astro-section news-bg">
+            <h2>News / Announcements</h2>
+            <div class="news-list">
+                <div class="news-item">
+                    <span class="news-date">[Date]</span>
+                    <h4>[Titre de l'annonce ou de la news]</h4>
+                    <p>[Texte ou résumé de l'annonce, actualité, réflexion, etc.]</p>
+                </div>
+                <!-- Ajoute d'autres .news-item pour chaque nouvelle annonce -->
+            </div>
+        </section>
+        <!-- Section Contact -->
+        <section id="contact" class="astro-section contact-bg">
             <h2>Contact</h2>
             <p>Feel free to reach out via email at <a href="mailto:your-email@example.com">rahyan.bellabiod@universite-paris-saclay.fr</a>.</p>
         </section>
     </main>
+    <!-- Pied de page -->
     <footer>
         <p>&copy; 2025 Bellabiod Rahyan. All rights reserved.</p>
     </footer>
