@@ -331,6 +331,15 @@ footer {
     }
 }
 
+.internships > h3,
+.education > h3 {
+    grid-column: 1 / -1;
+    margin-bottom: 1.2em;
+    margin-top: 0;
+    text-align: center;
+    /* Pour éviter que le titre soit collé à la grille */
+}
+
 /* Pour garder l'alignement vertical sur mobile */
 @media (max-width: 899px) {
     .internships,
