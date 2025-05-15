@@ -344,3 +344,24 @@ footer {
 .education-item {
     break-inside: avoid;
 }
+
+/* Style pour l'option de langue dans la barre de navigation */
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-left: 1rem;
+}
+.lang-switch button {
+    padding: 0;
+    margin: 0 2px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.lang-switch img {
+    display: block;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
