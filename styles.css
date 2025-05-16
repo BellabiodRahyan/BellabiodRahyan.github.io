@@ -178,7 +178,7 @@ footer {
 
 /* Photo de profil ronde avec contrôle de la position */
 .profile-photo {
-    width: 500px;
+    width: 200px;
     height: 200px;
     object-fit: cover;
     object-position: center;
