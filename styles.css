@@ -68,9 +68,26 @@ nav {
     margin: 0;
     padding: 0;
     display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #333 #111;
+    max-width: 100vw;
+}
+
+.navbar ul::-webkit-scrollbar {
+    height: 1px;
+    background: #111;
+}
+.navbar ul::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 1px;
 }
 
 .navbar li {
+    display: inline-block;
     margin: 0 15px;
 }
 
@@ -454,4 +471,14 @@ footer {
 .hobby-item h3 {
     color: #00aaff;
     margin-bottom: 0.5rem;
+}
+
+/* Pour éviter que la navbar ne déborde verticalement sur mobile */
+@media (max-width: 700px) {
+    .navbar ul {
+        padding-bottom: 4px;
+    }
+    .navbar {
+        background: rgba(34,34,34,0.98);
+    }
 }

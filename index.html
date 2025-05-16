@@ -20,22 +20,24 @@
 <body>
     <!-- Barre de navigation principale -->
     <nav id="navbar" class="navbar">
-        <ul>
-            <li><a href="home.html" data-i18n="home">Home</a></li>
-            <li><a href="about.html" data-i18n="about">About Me</a></li>
-            <li><a href="research.html" data-i18n="research">Research/Projects</a></li>
-            <li><a href="hobbies.html" data-i18n="hobbies">Hobbies</a></li>
-            <li><a href="contact.html" data-i18n="contact">Contact</a></li>
-            <li><a href="news.html" data-i18n="news">News</a></li>
-            <li class="lang-switch">
-                <button id="lang-en" title="English" style="background:none;border:none;cursor:pointer;">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1600px-Flag_of_the_United_Kingdom.svg.png?20190917170937" alt="EN" width="24" height="16">
-                </button>
-                <button id="lang-fr" title="Français" style="background:none;border:none;cursor:pointer;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="FR" width="24" height="16">
-                </button>
-            </li>
-        </ul>
+        <div style="overflow-x:auto; -webkit-overflow-scrolling:touch;">
+            <ul tabindex="0">
+                <li><a href="home.html" data-i18n="home">Home</a></li>
+                <li><a href="about.html" data-i18n="about">About Me</a></li>
+                <li><a href="research.html" data-i18n="research">Research/Projects</a></li>
+                <li><a href="hobbies.html" data-i18n="hobbies">Hobbies</a></li>
+                <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+                <li><a href="news.html" data-i18n="news">News</a></li>
+                <li class="lang-switch">
+                    <button id="lang-en" title="English" style="background:none;border:none;cursor:pointer;">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1600px-Flag_of_the_United_Kingdom.svg.png?20190917170937" alt="EN" width="24" height="16">
+                    </button>
+                    <button id="lang-fr" title="Français" style="background:none;border:none;cursor:pointer;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="FR" width="24" height="16">
+                    </button>
+                </li>
+            </ul>
+        </div>
     </nav>
     <!-- Script pour cacher/afficher la navbar lors du scroll -->
     <script>
@@ -56,6 +58,13 @@
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Pour mobile ou scroll négatif
         });
     </script>
+    <!-- Section principale Home -->
+    <header class="hero">
+        <div class="overlay">
+            <h1>Bellabiod Rahyan</h1>
+            <p>Student in Astrochemistry & Astrophysics</p>
+        </div>
+    </header>
     <main>
         <!-- Section À propos -->
         <section id="about" class="astro-section about-bg" style="position:relative;">
