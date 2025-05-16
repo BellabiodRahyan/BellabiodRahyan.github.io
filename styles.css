@@ -147,6 +147,12 @@ main section {
     text-align: center;
 }
 
+/* Espacement du titre de section pour éviter la proximité avec la navbar */
+main section h2,
+.astro-section h2 {
+    margin-top: 3.5rem;
+}
+
 /* Pied de page */
 footer {
     background: #111;
@@ -188,6 +194,13 @@ footer {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
         url('https://cdn.esawebb.org/archives/images/screen/weic2411a.jpg') no-repeat center center/cover;
 }
+
+/* Fond spécifique pour la section Hobbies */
+.hobbies-bg {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Magellanic_Clouds_%E2%80%95_Irregular_Dwarf_Galaxies.jpg/960px-Magellanic_Clouds_%E2%80%95_Irregular_Dwarf_Galaxies.jpg') no-repeat center center/cover;
+}
+
 
 /* Photo de profil ronde avec contrôle de la position */
 .profile-photo {
@@ -439,7 +452,7 @@ footer {
     box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
-/* Responsive pour les animations */
+/* Responsive for animations */
 @media (max-width: 600px) {
     .hero-gif {
         width: 65px;
@@ -600,5 +613,13 @@ img {
     footer {
         padding: 0.5rem;
         font-size: 0.85rem;
+    }
+}
+
+/* Sur mobile, réduit un peu l'espacement si besoin */
+@media (max-width: 700px) {
+    main section h2,
+    .astro-section h2 {
+        margin-top: 2.5rem;
     }
 }
