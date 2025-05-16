@@ -74,14 +74,42 @@ nav {
     margin: 0 15px;
 }
 
+/* Navbar links: effet underline animé au hover/focus/active */
 .navbar a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* retire le soulignement */
     font-weight: bold;
+    position: relative;
+    transition: color 0.2s;
+}
+.navbar a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0; right: 0; bottom: -4px;
+    height: 3px;
+    background: linear-gradient(90deg, #00aaff 0%, #1967d2 100%);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.25s cubic-bezier(.4,0,.2,1);
+    pointer-events: none;
+}
+.navbar a:hover,
+.navbar a:focus,
+.navbar a:active {
+    color: #00aaff;
+    text-decoration: none; /* retire le soulignement même au hover */
+}
+.navbar a:hover::after,
+.navbar a:focus::after,
+.navbar a:active::after {
+    transform: scaleX(1);
 }
 
-.navbar a:hover {
-    text-decoration: underline;
+/* Supprime le soulignement classique au hover sur nav ul li a */
+nav ul li a:hover {
+    color: #00aaff;
+    text-decoration: none; /* retire le soulignement */
 }
 
 /* Styles supplémentaires pour la liste de navigation */
@@ -98,10 +126,6 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #00aaff;
 }
 
 /* Style général des sections principales */
@@ -154,8 +178,8 @@ footer {
 
 /* Photo de profil ronde avec contrôle de la position */
 .profile-photo {
-    width: 160px;
-    height: 160px;
+    width: 500px;
+    height: 200px;
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
@@ -402,37 +426,6 @@ footer {
     box-shadow: 0 1px 3px rgba(0,0,0,0.15);
 }
 
-/* Animation molécule/atome dans le header */
-.hero-gif {
-    position: absolute;
-    right: 32px;
-    bottom: 24px;
-    width: 110px;
-    height: auto;
-    z-index: 2;
-    pointer-events: none;
-    opacity: 0.85;
-}
-
-/* Animation spectre/expérience à côté de la photo de profil */
-.about-gif {
-    width: 90px;
-    height: 90px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.22);
-    object-fit: cover;
-    background: #111;
-}
-
-/* Animation simulation/recherche dans la section recherche */
-.research-gif {
-    width: 120px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-    opacity: 0.92;
-}
-
 /* Responsive pour les animations */
 @media (max-width: 600px) {
     .hero-gif {
@@ -444,4 +437,21 @@ footer {
         width: 50px;
         height: 50px;
     }
+}
+
+.hobby-list {
+    margin-top: 2rem;
+    background: rgba(0,0,0,0.5);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.hobby-item {
+    margin-bottom: 1.5rem;
+}
+
+.hobby-item h3 {
+    color: #00aaff;
+    margin-bottom: 0.5rem;
 }

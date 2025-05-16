@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Bellabiod Rahyan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+     <!-- Script pour cacher/afficher la navbar lors du scroll -->
+     <nav id="navbar" class="navbar">
+        <ul>
+            <li><a href="home.html" data-i18n="home">Home</a></li>
+            <li><a href="about.html" data-i18n="about">About Me</a></li>
+            <li><a href="research.html" data-i18n="research">Research/Projects</a></li>
+            <li><a href="hobbies.html" data-i18n="hobbies">Hobbies</a></li>
+            <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+            <li><a href="news.html" data-i18n="news">News</a></li>
+            <li class="lang-switch">
+                <button id="lang-en" title="English" style="background:none;border:none;cursor:pointer;">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1600px-Flag_of_the_United_Kingdom.svg.png?20190917170937" alt="EN" width="24" height="16">
+                </button>
+                <button id="lang-fr" title="Français" style="background:none;border:none;cursor:pointer;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="FR" width="24" height="16">
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <!-- Script pour cacher/afficher la navbar lors du scroll -->
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.style.top = '-60px';
+            } else {
+                navbar.style.top = '0';
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+    <main>
+        <!-- Section À propos -->
+        <section id="about" class="astro-section about-bg" style="position:relative;">
+            <h2 data-i18n="about_title">About Me</h2>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:1.2rem;">
+                <div style="display:flex;align-items:center;gap:1.2rem;">
+                    <!-- Photo de profil -->
+                    <img src="20240713_151228.jpg" alt="Bellabiod Rahyan" class="profile-photo">
+                    <div style="display:flex;flex-direction:column;align-items:center;">
+                    <div id="about">
+                            Astrochemistry and astrophysics, with a focus on material evolution in extreme environments & Observational Astrochemistry. Interested in using my interdisciplinary background to investigate the formation of key compounds in astronomical settings and the underlying mechanisms of their nanoscale assembly. My focus is on understanding the chemical processes occurring in extreme environments, such as star-forming regions in the outer reaches of galaxies.
+                    </div>
+                </div>
+            </div>
+            <!-- Lien pour télécharger le CV -->
+            <p>
+                <a href="Resume_Rahyan.pdf" target="_blank" class="cv-link" data-i18n="cv_link">Download my CV (PDF)</a>
+            </p>
+            <!-- Liste des stages -->
+            <div class="internships">
+                <h3 data-i18n="internships_title">Internships</h3>
+                <div class="internship">
+                    <img src="https://www.ismo.universite-paris-saclay.fr/wp-content/uploads/2022/06/cropped-Logo-ISMO_simple_b-1-300x170.png" alt="ISMO (UP-Saclay) CNRS" class="internship-logo" style="width:300px;height:60px;margin-left:-100px;margin-right:auto;display:block;">
+                    <h4>Current Research Internship - ISMO (UP-Saclay) CNRS, France</h4>
+                    <p><strong>Location:</strong> ISMO (UP-Saclay) CNRS, France</p>
+                    <p><strong>Period:</strong> April 2025 – Present</p>
+                    <p><strong>Supervisor:</strong> Emmanuel Dartois</p>
+                    <p><strong>Project:</strong> Laboratory Study of Interstellar Matter Analogs</p>
+                    <ul>
+                        <li>Investigating the production and evolution of interstellar matter, Polycyclic aromatic hydrocarbon (PAHs), using plasma-based techniques.</li>
+                        <li>Conducting UV and IR characterization of synthesized materials.</li>
+                        <li>Performing data analysis using Python3 programming.</li>
+                    </ul>
+                </div>
+                <div class="internship">
+                    <img src="https://www2.lowtem.hokudai.ac.jp/image/toptitle.png" class="internship-logo" style="width:300px;height:60px;margin-left:-80px;margin-right:auto;display:block;">
+                    <h4>Bachelor’s Internship - Institute of Low Temperature Science (Sapporo, Japan)</h4>
+                    <p><strong>Location:</strong> Institute of Low Temperature Science, Sapporo, Japan</p>
+                    <p><strong>Period:</strong> May 2024 – August 2024 (3 months)</p>
+                    <p><strong>Supervisor:</strong> Prof. Yuki Kimura</p>
+                    <p><strong>Project:</strong> Investigated material evolution in the universe from a microscopic point of view, specifically studying nanoscale nucleation and growth of Ca oxide and Si oxide.</p>
+                    <ul>
+                        <li>Characterized samples using FT-IR spectroscopy, TEM, and SEM.</li>
+                        <li>Contributed to understanding the mechanisms of material formation under astronomical conditions.</li>
+                        <li>Co-worked conference presentation: "In-situ IR Measurements of the Nucleation Processes of SiC Aiming to Elucidate the Mechanisms of Cosmic Dust Formation", JCCG-53, Tokyo, Nov. 2024.</li>
+                    </ul>
+                </div>
+                <div class="internship">
+                    <img src="https://www.naist.jp/en/img/common/logo_en.png" alt="Nara Institute of Science and Technology" class="internship-logo" style="width:250px;height:px">
+                    <h4>Bachelor’s Internship - Nara Institute of Science and Technology (Nara, Japan)</h4>
+                    <p><strong>Location:</strong> Nara Institute of Science and Technology, Nara, Japan</p>
+                    <p><strong>Period:</strong> May 2023 – July 2023 (2 months)</p>
+                    <p><strong>Supervisors:</strong> Prof. Yoichiro Hosokawa, Dr. Yuka Tsuri</p>
+                    <p><strong>Project:</strong> Studied the crystallization of dye molecules using femtosecond laser irradiation.</p>
+                    <ul>
+                        <li>Developed expertise in handling laser equipment.</li>
+                        <li>Analyzed crystal structures using X-ray diffraction.</li>
+                        <li>Results contributed to a joint UP-Saclay/NAIST PhD project.</li>
+                        <li>Topic will be presented at LAMP2025 Congress in Japan: "Rhodamine B crystallization induced by Femtosecond-laser" (co-author), by PhD. Fabian Guillermo Dorado Lopez.</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Parcours universitaire -->
+            <div class="education">
+                <h3 data-i18n="education_title">Education</h3>
+                <div class="education-item">
+                    <span class="logo-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Logo_Universit%C3%A9_Paris-Saclay_2019-12.svg/2560px-Logo_Universit%C3%A9_Paris-Saclay_2019-12.svg.png" alt="University 1 logo" class="education-logo" style="width:300px;height:60px;margin-top:-40px;">
+                    </span>
+                    <div>
+                        <strong>Double Bachelor</strong> – Paris-Saclay University<br>
+                        <span class="education-period">2021- 2024</span>
+                        <p>Chemistry & Biology</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <span class="logo-box">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Logo_Universit%C3%A9_Paris-Saclay_2019-12.svg/2560px-Logo_Universit%C3%A9_Paris-Saclay_2019-12.svg.png" alt="University 1 logo" class="education-logo" style="width:300px;height:60px;margin-top:-50px;">
+                    </span>
+                    <div>
+                        <strong>Master</strong> – Paris-Saclay University<br>
+                        <span class="education-period">2024-Still in progress</span>
+                        <p>Inorganic, Physics and Solid State Chemistry</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+</body>
+</html>

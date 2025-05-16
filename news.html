@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ...existing code from index.html <head>... -->
+    <meta charset="UTF-8">
+    <!-- ...existing code... -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- ...existing code... -->
+</head>
+<body>
+    <!-- Script pour cacher/afficher la navbar lors du scroll -->
+    <nav id="navbar" class="navbar">
+        <ul>
+            <li><a href="home.html" data-i18n="home">Home</a></li>
+            <li><a href="about.html" data-i18n="about">About Me</a></li>
+            <li><a href="research.html" data-i18n="research">Research/Projects</a></li>
+            <li><a href="hobbies.html" data-i18n="hobbies">Hobbies</a></li>
+            <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+            <li><a href="news.html" data-i18n="news">News</a></li>
+            <li class="lang-switch">
+                <button id="lang-en" title="English" style="background:none;border:none;cursor:pointer;">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1600px-Flag_of_the_United_Kingdom.svg.png?20190917170937" alt="EN" width="24" height="16">
+                </button>
+                <button id="lang-fr" title="Français" style="background:none;border:none;cursor:pointer;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="FR" width="24" height="16">
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <!-- Script pour cacher/afficher la navbar lors du scroll -->
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.style.top = '-60px';
+            } else {
+                navbar.style.top = '0';
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+    <main>
+        <section id="news" class="astro-section news-bg">
+            <h2 data-i18n="news_title">News / Announcements</h2>
+            <div class="news-list">
+                <div class="news-item">
+                    <span class="news-date">2024-07-13</span>
+                    <h4>🎉 Website Launch!</h4>
+                    <p>
+                        I am excited to announce the official launch of my personal website! Here, you will find information about my background, research, internships, and news updates.  
+                        Thank you for visiting, and stay tuned for more content soon!
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Bellabiod Rahyan. All rights reserved.</p>
+    </footer>
+    <!-- ...script i18n identique à index.html... -->
+</body>
+</html>

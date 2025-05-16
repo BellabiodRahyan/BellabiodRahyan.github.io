@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ...existing code from index.html <head>... -->
+    <meta charset="UTF-8">
+    <!-- ...existing code... -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- ...existing code... -->
+</head>
+<body>
+    <!-- Correction: navbar identique à index.html -->
+    <nav id="navbar" class="navbar">
+        <ul>
+            <li><a href="home.html" data-i18n="home">Home</a></li>
+            <li><a href="about.html" data-i18n="about">About Me</a></li>
+            <li><a href="research.html" data-i18n="research">Research/Projects</a></li>
+            <li><a href="hobbies.html" data-i18n="hobbies">Hobbies</a></li>
+            <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+            <li><a href="news.html" data-i18n="news">News</a></li>
+            <li class="lang-switch">
+                <button id="lang-en" title="English" style="background:none;border:none;cursor:pointer;">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/1600px-Flag_of_the_United_Kingdom.svg.png?20190917170937" alt="EN" width="24" height="16">
+                </button>
+                <button id="lang-fr" title="Français" style="background:none;border:none;cursor:pointer;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="FR" width="24" height="16">
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <!-- Script pour cacher/afficher la navbar lors du scroll -->
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                navbar.style.top = '-60px';
+            } else {
+                navbar.style.top = '0';
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+    <main>
+        <section id="research" class="astro-section research-bg" style="position:relative;">
+            <h2 data-i18n="research_title">Research/Projects</h2>
+            <p data-i18n="research_text"></p>
+            <p>
+                <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" class="scholar-link" data-i18n="scholar_link">
+                    View my Google Scholar profile
+                </a>
+            </p>
+            <div class="future-publications">
+                <h3 data-i18n="future_publications_title">Future Publications</h3>
+                <ul>
+                    <li data-i18n="future_publications_none">No publications yet. Stay tuned for upcoming research!</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Bellabiod Rahyan. All rights reserved.</p>
+    </footer>
+    <!-- ...script i18n identique à index.html... -->
+</body>
+</html>
