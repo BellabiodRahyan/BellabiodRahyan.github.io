@@ -46,17 +46,21 @@
     <main>
         <section id="contact" class="astro-section contact-bg">
             <h2 data-i18n="contact_title">Contact</h2>
-            <div style="display: flex; align-items: center; max-width: 480px; margin: 0 auto 1em auto;">
-                <span id="email-text" style="word-break: break-all; user-select: all;">rahyan.bellabiod [at] universite-paris-saclay.fr</span>
-                <button id="copy-email-btn" title="Copy email" style="margin-left:auto;padding:2px 8px;border-radius:5px;border:none;cursor:pointer;font-size:0.95em;">
-                    📋
-                </button>
-                <span id="copy-email-msg" style="font-size:0.9em;color:#00aaff;margin-left:6px;display:none;">Copied!</span>
-                <span id="email-text" style="word-break: break-all; user-select: all;">rahyan.bellabiod [at] etu.sorbonne-universite.fr</span>
-                <button id="copy-email-btn" title="Copy email" style="margin-left:auto;padding:2px 8px;border-radius:5px;border:none;cursor:pointer;font-size:0.95em;">
-                    📋
-                </button>
-                <span id="copy-email-msg" style="font-size:0.9em;color:#00aaff;margin-left:6px;display:none;">Copied!</span>
+            <div style="display: flex; flex-direction: column; align-items: flex-start; max-width: 480px; margin: 0 auto 1em auto;">
+                <div style="display: flex; align-items: center; width: 100%;">
+                    <span id="email-text-saclay" style="word-break: break-all; user-select: all;">rahyan.bellabiod [at] universite-paris-saclay.fr</span>
+                    <button id="copy-email-btn-saclay" title="Copy email" style="margin-left:auto;padding:2px 8px;border-radius:5px;border:none;cursor:pointer;font-size:0.95em;">
+                        📋
+                    </button>
+                    <span id="copy-email-msg-saclay" style="font-size:0.9em;color:#00aaff;margin-left:6px;display:none;">Copied!</span>
+                </div>
+                <div style="display: flex; align-items: center; width: 100%; margin-top: 8px;">
+                    <span id="email-text-sorbonne" style="word-break: break-all; user-select: all;">rahyan.bellabiod [at] etu.sorbonne-universite.fr</span>
+                    <button id="copy-email-btn-sorbonne" title="Copy email" style="margin-left:auto;padding:2px 8px;border-radius:5px;border:none;cursor:pointer;font-size:0.95em;">
+                        📋
+                    </button>
+                    <span id="copy-email-msg-sorbonne" style="font-size:0.9em;color:#00aaff;margin-left:6px;display:none;">Copied!</span>
+                </div>
             </div>
             <p>
                 <a href="https://www.linkedin.com/in/rahyan-bellabiod" target="_blank" rel="noopener" class="cv-link" style="background:#0077b5;">
